@@ -16,6 +16,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 
+// Start express app
 const app = express();
 
 app.set('view engine', 'pug');
@@ -31,20 +32,20 @@ app.use(helmet());
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
+  app.use(morgan('dev'));
 }
 
 // Limit requests from same API
 const limiter = rateLimit({
-    max: 100,
-    windowMs: 60 * 60 * 1000,
-    message: 'Too many requests from this IP, please try again later!'
+  max: 100,
+  windowMs: 60 * 60 * 1000,
+  message: 'Too many requests from this IP, please try again later!',
 });
 app.use('/api', limiter);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' }))
+app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
 
 // Data sanitization against NoSQL query injection
@@ -54,22 +55,24 @@ app.use(mongoSanitize());
 app.use(xss());
 
 // Preventing parameter pollution
-app.use(hpp({
+app.use(
+  hpp({
     whitelist: [
-        'duration',
-        'ratingsQuantity',
-        'ratingsAverage',
-        'maxGroupSize',
-        'price',
-        'difficulty'
-    ]
-}));
+      'duration',
+      'ratingsQuantity',
+      'ratingsAverage',
+      'maxGroupSize',
+      'price',
+      'difficulty',
+    ],
+  })
+);
 
 // Test middleware
 app.use((req, res, next) => {
-    req.requestTime = new Date().toISOString();
-    // console.log(req.cookies);
-    next();
+  req.requestTime = new Date().toISOString();
+  // console.log(req.cookies);
+  next();
 });
 
 // ROUTES
@@ -80,8 +83,8 @@ app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/bookings', bookingRouter);
 
 app.all('*', (req, res, next) => {
-    next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
-})
+  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+});
 
 app.use(globalErrorHandler);
 
