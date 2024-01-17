@@ -33,7 +33,7 @@ export const logout = async () => {
       url: '/api/v1/users/logout',
     });
     if ((res.data.status = 'success')) {
-      showAlert('warning', 'Logged out successfully');
+      showAlert('success', 'Logged out successfully');
       window.setTimeout(() => {
         location.assign('/');
       }, 1500);

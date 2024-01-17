@@ -1,0 +1,252 @@
+/* For desctops below 1250px */
+@media (max-width: 78em) {
+  .main {
+    padding: 4rem 3rem;
+  }
+
+  .card-container {
+    grid-gap: 4rem;
+  }
+
+  .card__details {
+    padding: 1.5rem 2rem;
+  }
+  .card__footer {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+    grid-template-columns: auto 1fr;
+  }
+  .cta__text {
+    font-size: 1.7rem;
+  }
+  .heading-box {
+    bottom: 12vw;
+    top: 25%;
+  }
+}
+/* For desctops below 1050px */
+@media (max-width: 66em) {
+  html {
+    font-size: 56.25%;
+  }
+  .main {
+    padding: 6rem 6rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+  }
+  .user-view__menu {
+    flex: 20rem 0 0;
+  }
+  .side-nav a:link,
+  .side-nav a:visited {
+    padding: 1rem 2rem;
+  }
+  .user-view__content {
+    padding-top: 5rem;
+  }
+  .user-view__form-container {
+    padding-left: 5rem;
+  }
+  .heading-primary {
+    width: 80%;
+  }
+  .section-cta {
+    padding-bottom: 6rem;
+    padding-top: calc(9rem + var(--section-rotate));
+  }
+  .heading-box {
+    bottom: 11vw;
+    top: 25%;
+  }
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 2.2rem;
+    padding: 1.8rem 5rem;
+    border-radius: 10rem;
+  }
+  .cta__text {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+  .cta {
+    padding: 5rem 3rem 5rem 14rem;
+  }
+}
+/* For desctops below 800px */
+@media (max-width: 51em) {
+  html {
+    font-size: 50%;
+  }
+  .user-view {
+    flex-direction: column-reverse;
+  }
+  .side-nav a:link,
+  .side-nav a:visited {
+    font-size: 1.8rem;
+  }
+  .heading-box {
+    bottom: 10vw;
+    top: 30%;
+  }
+  .heading-primary {
+    font-size: 3rem;
+  }
+  .section-description > * {
+    padding: 0 5vw;
+    padding-top: 10vw;
+    padding-bottom: calc(1vw + var(--section-rotate));
+  }
+  .section-cta {
+    padding-bottom: 5rem;
+    padding-top: calc(6rem + var(--section-rotate));
+  }
+  .cta {
+    padding: 5rem 3rem 5rem 14rem;
+  }
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .cta__img {
+    height: 12rem;
+    width: 12rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 2.2rem;
+    padding: 1.8rem 5rem;
+  }
+  .cta__text {
+    margin-bottom: 2.6rem;
+    font-size: 1.6rem;
+  }
+  .footer {
+    padding: 4rem 3rem 2rem 3rem;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__logo {
+    align-self: flex-start;
+    padding-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  .footer__copyright {
+    align-self: end;
+  }
+  .footer__nav {
+    align-self: end;
+  }
+}
+/* For desctops below 599px */
+@media (max-width: 37.4em) {
+  .main {
+    padding: 3rem 3rem;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+  .nav__el,
+  .nav__el:link,
+  .nav__el:visited {
+    font-size: 1.3rem;
+  }
+  .header {
+    padding: 0 3rem;
+    gap: 1rem;
+  }
+  .header__logo img {
+    height: 1.6rem;
+  }
+  .nav--tours {
+    -ms-flex: 0 0 18.5%;
+    flex: 0 0 18.5%;
+  }
+  .nav--user {
+    -ms-flex: 1 0 20%;
+    flex: 1 0 20%;
+  }
+  .footer__nav {
+    align-self: flex-start;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1.5fr 2.2fr 2fr;
+    row-gap: 1rem;
+  }
+  .footer .footer__logo {
+    padding: 0.5rem 1rem;
+  }
+  .footer {
+    padding: 3rem 3rem 2rem 3rem;
+  }
+  .section-description {
+    flex-direction: column;
+  }
+  .section-map {
+    height: 45rem;
+    margin-top: calc(0px - var(--section-rotate));
+  }
+  .section-pictures {
+    flex-direction: column;
+  }
+  .picture-box__img--1 {
+    padding-top: 0;
+  }
+  .picture-box__img--2 {
+    padding-bottom: 0;
+  }
+  .picture-box__img--3 {
+    padding-bottom: 0;
+  }
+  .cta__img {
+    left: 0;
+    top: 12%;
+  }
+  .cta {
+    padding: 15rem 3rem 5rem 3rem;
+  }
+  .user-view__content {
+    padding-top: 3rem;
+  }
+  .user-view__form-container {
+    padding: 0 3rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.6rem;
+    padding: 1.4rem 3rem;
+  }
+  .heading-secondary {
+    font-size: 1.8rem;
+  }
+  .cta__text {
+    font-size: 1.5rem;
+  }
+  .login-form {
+    padding: 3rem 5rem;
+  }
+  .signup-form,
+  .forgot_password-form {
+    padding: 3rem 3rem;
+  }
+}
+/* For desctops below 400px */
+@media (max-width: 25em) {
+  html {
+    font-size: 43.75%;
+  }
+  /* .login-form,
+  .forgot_password-form {
+    padding: 3rem 2rem;
+  } */
+}
